@@ -300,6 +300,9 @@ if (process.env.NODE_ENV !== "production") {
     transformErrors: PropTypes.func,
     safeRenderCompletion: PropTypes.bool,
     formContext: PropTypes.object,
-    metaSchema: PropTypes.object,
+    metaSchema: PropTypes.oneOfType(
+      PropTypes.object,
+      PropTypes.arrayOf(PropTypes.object)
+    ),
   };
 }
