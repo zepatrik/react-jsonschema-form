@@ -768,7 +768,7 @@ describe("Validation", () => {
           schema,
           formData,
           liveValidate: true,
-          additionalMetaSchemas: require("ajv/lib/refs/json-schema-draft-04.json"),
+          additionalMetaSchemas: [],
           onSubmit,
           onError,
         });
