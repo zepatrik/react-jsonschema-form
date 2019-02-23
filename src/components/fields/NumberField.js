@@ -5,7 +5,7 @@ import { asNumber } from "../../utils";
 
 /**
  * The NumberField class has some special handling for dealing with trailing
- * decimal points and/or zeroes. This logic is desgined to allow trailing values
+ * decimal points and/or zeroes. This logic is designed to allow trailing values
  * to be visible in the input element, but not be represented in the
  * corresponding form data.
  *
