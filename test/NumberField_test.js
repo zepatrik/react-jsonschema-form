@@ -129,7 +129,7 @@ describe("NumberField", () => {
       expect(node.querySelector(".field input").value).eql("2");
     });
 
-    describe("when inputting a number thats ends with a dot and/or zero it should normalize it, without changing the input value", () => {
+    describe("when inputting a number that ends with a dot and/or zero it should normalize it, without changing the input value", () => {
       const { comp, node } = createFormComponent({
         schema: {
           type: "number",
