@@ -178,7 +178,7 @@ describe("NumberField", () => {
       ];
 
       tests.forEach(test => {
-        it(`Should work with an input value of ${test.input}`, () => {
+        it(`should work with an input value of ${test.input}`, () => {
           Simulate.change($input, {
             target: { value: test.input },
           });
