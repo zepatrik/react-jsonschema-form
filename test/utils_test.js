@@ -325,13 +325,12 @@ describe("utils", () => {
       expect(asNumber("3.14")).eql(3.14);
     });
 
-    it("should return the raw value if the input ends with a dot", () => {
-      expect(asNumber("3.")).eql("3.");
+    it("should convert the value to an integer if the input ends with a dot", () => {
+      expect(asNumber("3.")).eql(3);
     });
 
-    it("should not convert the value to an integer if the input ends with a 0", () => {
-      // this is to allow users to input 3.07
-      expect(asNumber("3.0")).eql("3.0");
+    it("should convert the value to an integer if the input ends with a 0", () => {
+      expect(asNumber("3.0")).eql(3);
     });
 
     it("should allow numbers with a 0 in the first decimal place", () => {

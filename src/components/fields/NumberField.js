@@ -32,16 +32,7 @@ class NumberField extends React.Component {
   handleChange = value => {
     // Cache the original value in component state
     this.setState({ lastValue: value });
-
-    // Check that the value is a string (if the widget used is a select (due to
-    // an enum declaration etc), and if the value ends in a trailing decimal point
-    // or multiple zeroes, strip the trailing values
-    let normalized =
-      typeof value === "string" && value.match(/[0.]+$/)
-        ? asNumber(value.replace(/[0.]+$/, ""))
-        : asNumber(value);
-
-    this.props.onChange(normalized);
+    this.props.onChange(asNumber(value));
   };
 
   render() {
