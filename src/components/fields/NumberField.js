@@ -53,7 +53,7 @@ class NumberField extends React.Component {
 
     if (typeof lastValue === "string" && value) {
       // Construct a regular expression that checks for a string that consists
-      // of the formdata value suffixed with zero or one '.' characters and zero
+      // of the formData value suffixed with zero or one '.' characters and zero
       // or more '0' characters
       const re = new RegExp(`${value}`.replace(".", "\\.") + "\\.?0*$");
 
